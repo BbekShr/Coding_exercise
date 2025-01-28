@@ -1,5 +1,5 @@
-What are the top 5 brands by receipts scanned for most recent month?
-How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
+**What are the top 5 brands by receipts scanned for most recent month? How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?**
+- There are no top brands in March since no data is available for that month, and the ranking of the top 5 brands for February only includes Viva as the single listed brand. The ranking has significantly decreased in the most recent month (March), likely due to the absence of data.
 
 ![Top Brand query](../assets/Top_brands.png)
 
@@ -23,12 +23,12 @@ ORDER BY month DESC, brandcode_count DESC
 LIMIT 10;
 ``` 
 
-There are no top brands in March since no data is available for that month, and the ranking of the top 5 brands for February only includes Viva as the single listed brand. The ranking has significantly decreased in the most recent month (March), likely due to the absence of data.
+
 
 ![Top Brand viz](../assets/Top_5_brands_viz.png)
 
-When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
-When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+**When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater? When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?**
+- When considering average spend and total number of items purchased from receipts with 'rewardsReceiptStatus’, 'Accepted' is greater for both cases with $80.85 average spend and 8,184 items purchased 
 
 ![reward viz](../assets/reward_status.png)
 
@@ -50,9 +50,8 @@ ORDER BY
 ![reward viz](../assets/reward_status_viz_2.png)
 
 
-Which brand has the most spend among users who were created within the past 6 months?
-Which brand has the most transactions among users who were created within the past 6 months?
-
+**Which brand has the most spend among users who were created within the past 6 months? Which brand has the most transactions among users who were created within the past 6 months?**
+- For the past 6 months, Cracker Barrel Cheese has the most spending among users with spending of $1097.46 whereas, Pepsi has the most transactions among the users with 16 transactions
 ![brand_trend](../assets/Brand_trend.png)
 
 SQL code: 
