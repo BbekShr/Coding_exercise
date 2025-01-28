@@ -47,4 +47,4 @@ GROUP BY
 ORDER BY 
   avg_spend DESC;
 ```
-![reward viz](../assets/reward_status_viz.png)
+![reward viz](../assets/reward_status_viz_2.png)
