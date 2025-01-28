@@ -22,10 +22,10 @@ I hope this message finds you well. I’ve reviewed the receipt data schema, and
 	•	Implementing validation checks in the ETL pipeline could proactively address data quality issues and reduce downstream inefficiencies.
 
 For reference, please see the insights I could gather with the current schema, hope that helps
-![Top Brand viz](./assets/Top_5_brands_viz.png)
-![reward viz](./assets/reward_status_viz_2.png)
-![brand_trend_viz_1](./assets/Brand_trend_viz_1.png)
-![brand_trend_viz_2](./assets/Brand_trend_viz_2.png)
+![Top Brand viz](../assets/Top_5_brands_viz.png)
+![reward viz](../assets/reward_status_viz_2.png)
+![brand_trend_viz_1](../assets/Brand_trend_viz_1.png)
+![brand_trend_viz_2](../assets/Brand_trend_viz_2.png)
 
 
 Please let me know how you’d like to proceed with addressing the missing values and optimizing the schema. I’d be happy to provide more detailed recommendations or prioritize specific areas as needed. I am also open to jump on a quick if it is easier to go over it.
