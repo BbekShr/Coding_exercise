@@ -1,1 +1,1 @@
-![ER_diagram](../assets/ER Diagram_1.png)
+![ER_diagram](../assets/ER_Diagram_1.png)
