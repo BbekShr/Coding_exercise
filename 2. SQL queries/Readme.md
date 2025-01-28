@@ -26,3 +26,25 @@ LIMIT 10;
 There are no top brands in March since no data is available for that month, and the ranking of the top 5 brands for February only includes Viva as the single listed brand. The ranking has significantly decreased in the most recent month (March), likely due to the absence of data.
 
 ![Top Brand viz](../assets/Top_5_brands_viz.png)
+
+When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+
+![reward viz](../assets/reward_status.png)
+
+SQL code: 
+```sql
+SELECT 
+  rewardsReceiptStatus as Rewards_status,
+  ROUND(AVG(totalSpent),2) AS Avg_spend,
+  SUM(purchasedItemCount) AS Total_items_purchased
+FROM 
+  `polished-cocoa-361321.receipts.receipts`
+WHERE 
+  rewardsReceiptStatus IN ('FINISHED', 'REJECTED')
+GROUP BY 
+  rewardsReceiptStatus
+ORDER BY 
+  avg_spend DESC;
+```
+![reward viz](../assets/reward_status_viz.png)
