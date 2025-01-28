@@ -17,9 +17,9 @@ I hope this message finds you well. I’ve reviewed the receipt data schema, and
     - The RewardsReceiptItemList column could be normalized into a separate table that references the receipts table. This would improve data organization and scalability while simplifying analysis of this vital information.
     - Similarly, CPG could also benefit from being structured as its own table, especially if scaling becomes a priority in this part of the product.
 
-3. Performance and Scaling Concerns:
-	•	Normalizing large JSON columns and critical datasets like RewardsReceiptItemList would improve query performance and ensure smoother scaling as data volume grows.
-	•	Implementing validation checks in the ETL pipeline could proactively address data quality issues and reduce downstream inefficiencies.
+3. Performance and Scaling :
+   - Normalizing large JSON columns and critical datasets like RewardsReceiptItemList would improve query performance and ensure smoother scaling as data volume grows.
+   - Implementing validation checks in the ETL pipeline could proactively address data quality issues and reduce downstream inefficiencies.
 
 For reference, please see the insights I could gather with the current schema, hope that helps
 ![Top Brand viz](../assets/Top_5_brands_viz.png)
