@@ -48,3 +48,39 @@ ORDER BY
   avg_spend DESC;
 ```
 ![reward viz](../assets/reward_status_viz_2.png)
+
+
+Which brand has the most spend among users who were created within the past 6 months?
+Which brand has the most transactions among users who were created within the past 6 months?
+
+![brand_trend](../assets/Brand_trend.png)
+
+SQL code: 
+```sql
+WITH latest_date AS (
+  SELECT MAX(createdDate) AS latest_createdDate
+  FROM polished-cocoa-361321.users.users
+)
+SELECT 
+  b.name,
+  ROUND(SUM(ri.itemPrice), 2) AS total_itemPrice,
+  COUNT(DISTINCT r._id) AS transaction_count
+FROM 
+  polished-cocoa-361321.receipts.receipts r
+JOIN 
+  polished-cocoa-361321.rewards_receipt_items.rewards_receipt_items ri ON r._id = ri.parent_id
+JOIN 
+  polished-cocoa-361321.brands.brands b ON ri.brandcode = b.brandcode
+JOIN 
+  polished-cocoa-361321.users.users u ON r.userId = u._id
+JOIN 
+  latest_date ld ON u.createdDate >= TIMESTAMP(DATE_SUB(DATE(ld.latest_createdDate), INTERVAL 6 MONTH))
+GROUP BY 
+  b.name
+ORDER BY 
+  total_itemPrice DESC, transaction_count DESC;
+```
+
+![brand_trend_viz_1](../assets/Brand_trend_viz_1.png)
+
+![brand_trend_viz_2](../assets/Brand_trend_viz_2.png)
